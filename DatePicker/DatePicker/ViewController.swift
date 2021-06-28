@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     let timeSelector: Selector = #selector(ViewController.updateTime)
     let interval = 1.0
     var count = 0
+    var alarmTime: String?
     
     @IBOutlet var IbICurrentTime: UILabel!
     @IBOutlet var IbIPickerTime: UILabel!
@@ -28,14 +29,28 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
         IbIPickerTime.text = "선택시간 : " + formatter.string(from: datePickerView.date)
+        
+        alarmTime = formatter.string(from: datePickerView.date)
     }
     
     @objc func updateTime() {
         let date = NSDate()
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
         IbICurrentTime.text = "현재시간 : " + formatter.string(from: date as Date)
+        
+        let currentTime = formatter.string(from: date as Date)
+        
+        if alarmTime == currentTime {
+            self.view.backgroundColor = UIColor.red
+        } else {
+            self.view.backgroundColor = UIColor.white
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 600){
+            self.view.backgroundColor = UIColor.white
+        }
     }
     
 }
