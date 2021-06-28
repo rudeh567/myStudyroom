@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 10
-    let PICKER_VIEW_COLUMN = 1
+    let PICKER_VIEW_COLUMN = 2
     var imageArray = [UIImage?]()
     var imageFileName = [ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.png", "9.jpg", "10.jpg" ]
     
@@ -51,8 +51,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent conponent: Int) {
-        IbIImageFileName.text = imageFileName[row]
-        imageView.image = imageArray[row]
+        
+        if conponent == 0 {
+            IbIImageFileName.text = imageFileName[row]
+        } else {
+            imageView.image = imageArray[row]
+        }
+        
     }
     
 }
