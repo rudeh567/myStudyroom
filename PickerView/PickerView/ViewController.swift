@@ -39,8 +39,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return imageFileName.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent conponent: Int) -> String? {
-        return imageFileName[row]
+  //  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent conponent: Int) -> String? {
+  //      return imageFileName[row]
+  //  }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let imageView = UIImageView(image: imageArray[row])
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 150)
+        
+        return imageView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent conponent: Int) {
