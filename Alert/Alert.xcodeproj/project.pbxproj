@@ -15,6 +15,7 @@
 		A8AA121B268A8EED00D7A237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AA1219268A8EED00D7A237 /* LaunchScreen.storyboard */; };
 		A8AA1223268A944700D7A237 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8AA1222268A944700D7A237 /* cat.jpg */; };
 		A8AA1225268A945600D7A237 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8AA1224268A945600D7A237 /* dog.jpg */; };
+		A8AA1227268A986300D7A237 /* gasi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8AA1226268A986300D7A237 /* gasi.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A8AA121C268A8EED00D7A237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AA1222268A944700D7A237 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = ../../ImageView/ImageView/cat.jpg; sourceTree = "<group>"; };
 		A8AA1224268A945600D7A237 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog.jpg; path = ../../PickerView/PickerView/Images/dog.jpg; sourceTree = "<group>"; };
+		A8AA1226268A986300D7A237 /* gasi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gasi.jpg; path = ../../PickerView/PickerView/Images/gasi.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				A8AA1222268A944700D7A237 /* cat.jpg */,
 				A8AA1224268A945600D7A237 /* dog.jpg */,
+				A8AA1226268A986300D7A237 /* gasi.jpg */,
 				A8AA120E268A8EEC00D7A237 /* AppDelegate.swift */,
 				A8AA1210268A8EEC00D7A237 /* SceneDelegate.swift */,
 				A8AA1212268A8EEC00D7A237 /* ViewController.swift */,
@@ -133,6 +136,7 @@
 				A8AA121B268A8EED00D7A237 /* LaunchScreen.storyboard in Resources */,
 				A8AA1218268A8EED00D7A237 /* Assets.xcassets in Resources */,
 				A8AA1223268A944700D7A237 /* cat.jpg in Resources */,
+				A8AA1227268A986300D7A237 /* gasi.jpg in Resources */,
 				A8AA1225268A945600D7A237 /* dog.jpg in Resources */,
 				A8AA1216268A8EEC00D7A237 /* Main.storyboard in Resources */,
 			);
