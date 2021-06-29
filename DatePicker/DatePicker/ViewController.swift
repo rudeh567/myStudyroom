@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let interval = 1.0
     var count = 0
     var alarmTime: String?
+    var alertFlag = false
     
     @IBOutlet var IbICurrentTime: UILabel!
     @IBOutlet var IbIPickerTime: UILabel!
@@ -43,14 +44,19 @@ class ViewController: UIViewController {
         let currentTime = formatter.string(from: date as Date)
         
         if alarmTime == currentTime {
-            self.view.backgroundColor = UIColor.red
+            if !alertFlag {
+                let alarmAlert = UIAlertController(title: "알림", message: "설정된 시간입니다!!", preferredStyle: UIAlertController.Style.alert)
+                
+                let alarmAction = UIAlertAction(title: "네, 알겠습니다.", style: UIAlertAction.Style.default, handler: nil)
+                
+                alarmAlert.addAction(alarmAction)
+                present(alarmAlert, animated: true, completion: nil)
+                alertFlag = true
+            }
         } else {
-            self.view.backgroundColor = UIColor.white
+            alertFlag = false
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 600){
-            self.view.backgroundColor = UIColor.white
-        }
+     
     }
     
 }
