@@ -7,17 +7,18 @@
 
 import UIKit
 
+let NUM_PAGE = 10
+
 class ViewController: UIViewController {
     
-    var images = [ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg" ]
-    @IBOutlet var imgView: UIImageView!
+    @IBOutlet var pageNumber: UILabel!
     @IBOutlet var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        pageControl.numberOfPages = images.count
+        pageControl.numberOfPages = NUM_PAGE
         
         pageControl.currentPage = 0
         
@@ -25,11 +26,11 @@ class ViewController: UIViewController {
         
         pageControl.currentPageIndicatorTintColor = UIColor.red
         
-        imgView.image = UIImage(named: images[0])
+        pageNumber.text = String(pageControl.currentPage+1)
     }
 
     @IBAction func pageChange(_ sender: UIPageControl) {
-        imgView.image = UIImage(named: images[pageControl.currentPage])
+        pageNumber.text = String(pageControl.currentPage+1)
     }
     
 }
