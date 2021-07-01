@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  TableView
+//  Table2
 //
-//  Created by GSM08 on 2021/06/30.
+//  Created by GSM08 on 2021/07/01.
 //
 
 import UIKit
