@@ -11,29 +11,28 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Audio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="3Jk-qF-Pht">
-                                <rect key="frame" x="-19" y="84" width="428" height="217"/>
+                                <rect key="frame" x="-27" y="84" width="444" height="217"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv4-AI-508">
-                                        <rect key="frame" x="149.66666666666666" y="0.0" width="128.99999999999997" height="28.666666666666668"/>
+                                        <rect key="frame" x="157.66666666666666" y="0.0" width="128.99999999999997" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xby-yT-czi">
-                                        <rect key="frame" x="74" y="54.666666666666657" width="280" height="4"/>
+                                        <rect key="frame" x="82" y="54.666666666666657" width="280" height="4"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="5qw-YF-mPS"/>
                                         </constraints>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="156" translatesAutoresizingMaskIntoConstraints="NO" id="tD7-cV-UP6">
-                                        <rect key="frame" x="36" y="84.666666666666657" width="356" height="20.333333333333329"/>
+                                        <rect key="frame" x="44" y="84.666666666666657" width="356" height="20.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj6-ZP-5os">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="20.333333333333332"/>
@@ -59,7 +58,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="qSh-Pj-XcP">
-                                        <rect key="frame" x="113" y="131" width="202" height="30"/>
+                                        <rect key="frame" x="121" y="131" width="202" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYJ-tK-JLw">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -85,7 +84,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-g8-JD2">
-                                        <rect key="frame" x="0.0" y="187" width="428" height="30"/>
+                                        <rect key="frame" x="0.0" y="187" width="444" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-MN-Fgb">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
@@ -94,7 +93,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-P0-lui">
-                                                <rect key="frame" x="92" y="0.0" width="338" height="31"/>
+                                                <rect key="frame" x="92" y="0.0" width="354" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="uIl-8Y-vlT"/>
                                                 </constraints>
@@ -153,6 +152,10 @@
                                     <constraint firstItem="Jbf-G8-aIT" firstAttribute="centerX" secondItem="Bx4-8X-WdU" secondAttribute="centerX" id="tYm-Ad-9YB"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROD-GR-jJC">
+                                <rect key="frame" x="56" y="449" width="279" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,6 +170,7 @@
                         <outlet property="btnPlay" destination="NYJ-tK-JLw" id="Kpr-82-1gl"/>
                         <outlet property="btnRecord" destination="eUy-PW-h56" id="glv-v6-LYT"/>
                         <outlet property="btnStop" destination="4En-Ub-vFg" id="RIt-xU-Hte"/>
+                        <outlet property="imageView" destination="ROD-GR-jJC" id="GfV-Ka-8fn"/>
                         <outlet property="lblCurrentTime" destination="cj6-ZP-5os" id="D3h-dq-57c"/>
                         <outlet property="lblEndTime" destination="yqA-DK-FgE" id="4jy-vI-Wc9"/>
                         <outlet property="lblRecordTime" destination="9LI-4j-LGt" id="oZo-IG-ctw"/>
@@ -174,6 +178,7 @@
                         <outlet property="slVolume" destination="HYC-P0-lui" id="lN9-W3-3lC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.46153846153845" y="130.80568720379145"/>
         </scene>
