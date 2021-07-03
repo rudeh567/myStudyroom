@@ -16,6 +16,9 @@
 		A84CDFBA268EA506000F943A /* FastTyping.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFB7268EA506000F943A /* FastTyping.mp4 */; };
 		A84CDFBB268EA506000F943A /* FastTyping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFB8268EA506000F943A /* FastTyping.jpg */; };
 		A84CDFBC268EA506000F943A /* Fireworks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFB9268EA506000F943A /* Fireworks.jpg */; };
+		A84CDFC0268EAD7B000F943A /* Mountaineering.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFBD268EAD7B000F943A /* Mountaineering.jpg */; };
+		A84CDFC1268EAD7B000F943A /* Mountaineering.mov in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFBE268EAD7B000F943A /* Mountaineering.mov */; };
+		A84CDFC2268EAD7B000F943A /* Seascape.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84CDFBF268EAD7B000F943A /* Seascape.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		A84CDFB7268EA506000F943A /* FastTyping.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastTyping.mp4; sourceTree = "<group>"; };
 		A84CDFB8268EA506000F943A /* FastTyping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FastTyping.jpg; sourceTree = "<group>"; };
 		A84CDFB9268EA506000F943A /* Fireworks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fireworks.jpg; sourceTree = "<group>"; };
+		A84CDFBD268EAD7B000F943A /* Mountaineering.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mountaineering.jpg; sourceTree = "<group>"; };
+		A84CDFBE268EAD7B000F943A /* Mountaineering.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Mountaineering.mov; sourceTree = "<group>"; };
+		A84CDFBF268EAD7B000F943A /* Seascape.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Seascape.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 		A84CDFB6268EA489000F943A /* Resoures */ = {
 			isa = PBXGroup;
 			children = (
+				A84CDFBD268EAD7B000F943A /* Mountaineering.jpg */,
+				A84CDFBE268EAD7B000F943A /* Mountaineering.mov */,
+				A84CDFBF268EAD7B000F943A /* Seascape.jpg */,
 				A84CDFB8268EA506000F943A /* FastTyping.jpg */,
 				A84CDFB7268EA506000F943A /* FastTyping.mp4 */,
 				A84CDFB9268EA506000F943A /* Fireworks.jpg */,
@@ -143,10 +152,13 @@
 			files = (
 				A84CDFAF268EA444000F943A /* LaunchScreen.storyboard in Resources */,
 				A84CDFAC268EA444000F943A /* Assets.xcassets in Resources */,
+				A84CDFC2268EAD7B000F943A /* Seascape.jpg in Resources */,
 				A84CDFBB268EA506000F943A /* FastTyping.jpg in Resources */,
+				A84CDFC0268EAD7B000F943A /* Mountaineering.jpg in Resources */,
 				A84CDFBA268EA506000F943A /* FastTyping.mp4 in Resources */,
 				A84CDFBC268EA506000F943A /* Fireworks.jpg in Resources */,
 				A84CDFAA268EA442000F943A /* Main.storyboard in Resources */,
+				A84CDFC1268EAD7B000F943A /* Mountaineering.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
