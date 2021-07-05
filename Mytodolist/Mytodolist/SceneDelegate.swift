@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Todolist
+//  Mytodolist
 //
-//  Created by GSM08 on 2021/06/29.
+//  Created by GSM08 on 2021/07/05.
 //
 
 import UIKit
