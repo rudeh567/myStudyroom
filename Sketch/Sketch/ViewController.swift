@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var imgView: UIImageView!
+    @IBOutlet var txtLineSize: UITextField!
     
     var lastPoint: CGPoint!
     var lineSize:CGFloat = 2.0
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        txtLineSize.text = String(Int(lineSize))
     }
 
     @IBAction func clearImageView(_ sender: UIButton) {
@@ -57,9 +59,6 @@ class ViewController: UIViewController {
         UIGraphicsGetCurrentContext()?.setLineCap(CGLineCap.round)
         UIGraphicsGetCurrentContext()?.setLineWidth(lineSize)
         
-        let touch = touches.first! as UITouch
-        let currPoint = touch.location(in: imgView)
-        
         imgView.image?.draw(in: CGRect(x: 0, y: 0, width: imgView.frame.size.width, height: imgView.frame.size.height))
         
         UIGraphicsGetCurrentContext()?.move(to: CGPoint(x: lastPoint.x, y: lastPoint.y))
@@ -71,7 +70,39 @@ class ViewController: UIViewController {
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        imgView.image = nil
+        if motion  == .motionShake {
+            imgView.image = nil
+        }
+    }
+    
+    @IBAction func txtEditChanged(_ sender: UITextField) {
+        if txtLineSize.text != "" {
+            lineSize =    CGFloat(Int(txtLineSize.text!)!)
+        }
+    }
+    
+    @IBAction func txtDidEndOnExit(_ sender: UITextField) {
+        lineSize =    CGFloat(Int(txtLineSize.text!)!)
+    }
+    
+    @IBAction func txtTouchDown(_ sender: UITextField) {
+        txtLineSize.selectAll(UITextField.self)
+    }
+    
+    @IBAction func btnChangeBlack(_ sender: UIButton) {
+        lineColor = UIColor.black.cgColor
+    }
+    
+    @IBAction func btnChangeRed(_ sender: UIButton) {
+        lineColor = UIColor.red.cgColor
+    }
+    
+    @IBAction func btnChangeGreen(_ sender: UIButton) {
+        lineColor = UIColor.green.cgColor
+    }
+    
+    @IBAction func btnChangeBlue(_ sender: UIButton) {
+        lineColor = UIColor.blue.cgColor
     }
     
 }
