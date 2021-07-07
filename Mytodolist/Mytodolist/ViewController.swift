@@ -11,6 +11,7 @@ var list = [Todolist]()
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var editButton: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
     
     let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonTap))
@@ -18,14 +19,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        list.append(Todolist(title: "test1", content: "testData"))
-        list.append(Todolist(title: "test2", content: "testData"))
-        list.append(Todolist(title: "test3", content: "testData"))
+        loadAllData()
+        print(list.description)
+        
+        doneButton.style = .plain
+        doneButton.target = self
     }
     
     @objc func doneButtonTap() {
-        self.navigationItem.leftBarButtonItem = editButtonItem
+        self.navigationItem.leftBarButtonItem = editButton
         tableView.setEditing(false, animated: true)
     }
     
@@ -34,10 +39,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    override func viewDidAppear(_ animated: Bool) {
+        saveAllData()
         tableView.reloadData()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,10 +57,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.textLabel?.text = list[indexPath.row].title
         cell.detailTextLabel?.text = list[indexPath.row].content
-        
         if list[indexPath.row].isComplete {
             cell.accessoryType = .checkmark
-        } else {
+        }else{
             cell.accessoryType = .none
         }
         
@@ -107,10 +114,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func btnEdit(_ sender: Any) {
+        // 리스트 비어있을 때 return
         guard !list.isEmpty else {
             return
         }
-        
+        self.navigationItem.leftBarButtonItem = doneButton
         tableView.setEditing(true, animated: true)
     }
     
