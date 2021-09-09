@@ -13,6 +13,7 @@
 		A88A971526E7352500105B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88A971326E7352500105B3B /* Main.storyboard */; };
 		A88A971726E7352700105B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88A971626E7352700105B3B /* Assets.xcassets */; };
 		A88A971A26E7352700105B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88A971826E7352700105B3B /* LaunchScreen.storyboard */; };
+		A88A972226E77AE500105B3B /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88A972126E77AE500105B3B /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A88A971626E7352700105B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88A971926E7352700105B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A88A971B26E7352700105B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88A972126E77AE500105B3B /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A88A971626E7352700105B3B /* Assets.xcassets */,
 				A88A971826E7352700105B3B /* LaunchScreen.storyboard */,
 				A88A971B26E7352700105B3B /* Info.plist */,
+				A88A972126E77AE500105B3B /* ModalViewController.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88A972226E77AE500105B3B /* ModalViewController.swift in Sources */,
 				A88A971226E7352500105B3B /* ViewController.swift in Sources */,
 				A88A970E26E7352500105B3B /* AppDelegate.swift in Sources */,
 				A88A971026E7352500105B3B /* SceneDelegate.swift in Sources */,
